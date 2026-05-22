@@ -2,57 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sapphire Bot — Credits</title>
+    <title>Haven Bot — Credits</title>
+
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: "Segoe UI", sans-serif;
-            background: url("https://cdn.discordapp.com/attachments/1506139097956356116/1507070263341220062/copy_2CFD341E-9D5C-4806-ADB5-7109409CE119-ezgif.com-video-to-gif-converter.gif?ex=6a1138ce&is=6a0fe74e&hm=5ae18120c6eaff16cab640d0f8e0af2b87ca7d6037edf894153cbf3b8b111660&") no-repeat center center fixed;
+            background: url("https://cdn.discordapp.com/attachments/1506139097956356116/1507070263341220062/copy_2CFD341E-9D5C-4806-ADB5-7109409CE119-ezgif.com-video-to-gif-converter.gif") no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .box {
-            background: rgba(0, 0, 0, 0.65);
-            padding: 40px;
-            border-radius: 12px;
-            width: 420px;
+            background: rgba(0, 0, 0, 0.55);
+            padding: 45px;
+            border-radius: 14px;
+            width: 520px;
             text-align: center;
-            backdrop-filter: blur(6px);
-            box-shadow: 0 0 25px rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 25px rgba(0,0,0,0.6);
+            animation: slideUp 1.2s ease;
         }
 
-        h1 {
-            font-size: 34px;
-            margin-bottom: 10px;
-            color: #5865F2;
+        @keyframes slideUp {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
 
-        .desc {
+        .title {
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #5865F2, #8EA1F2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #5865F2; }
+            to { text-shadow: 0 0 25px #8EA1F2; }
+        }
+
+        .credit {
+            font-size: 20px;
+            margin: 12px 0;
+            color: #e0e0e0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #5865F2;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
             font-size: 18px;
-            margin-bottom: 20px;
-            color: #dcdcdc;
+            transition: 0.25s;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #4752C4;
+            transform: scale(1.05);
         }
 
         .footer {
             margin-top: 25px;
             font-size: 14px;
-            color: #aaaaaa;
+            color: #bdbdbd;
         }
     </style>
 </head>
+
 <body>
 
 <div class="box">
-    <h1>Dan</h1>
-    <div class="desc">Owner And Developer of the bot !</div>
+    <div class="title">Haven Bot — Credits</div>
 
-    <div class="footer">© 2026 Sapphire Bot — All Rights Reserved</div>
+    <div class="credit"><strong>Developer:</strong> Dan</div>
+    <div class="credit"><strong>Designer:</strong> Dan</div>
+    <div class="credit"><strong>Website:</strong> Built by Dan</div>
+    <div class="credit"><strong>Bot Concept:</strong> Dan</div>
+    <div class="credit"><strong>Special Thanks:</strong> Haven Community</div>
+
+    <a class="btn" href="index.html">Back to Home</a>
+
+    <div class="footer">© 2026 Haven Bot — All Rights Reserved</div>
 </div>
 
 </body>
